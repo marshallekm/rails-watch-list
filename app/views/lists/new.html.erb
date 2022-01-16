@@ -1,6 +1,9 @@
 
-
-<%= simple_form_for(@list) do |f| %>
-<%= f.input :name %>
-<%= f.submit 'Create' %>
-<% end %>
+<div class="form-container">
+  <div class="form">
+    <%= simple_form_for(@list) do |f| %>
+      <%= f.input :name %>
+      <%= f.submit 'Create' %>
+      <% end %>
+    </div>
+</div>
