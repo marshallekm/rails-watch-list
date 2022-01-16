@@ -11,7 +11,14 @@ class BookmarksController < ApplicationController
     @bookmark.list = @list
     if @bookmark.save
       redirect_to list_path(@list)
-    end
+    else
+      render :new
+  end
+end
+
+  def destroy
+    @bookmark = bookmark.destroy
+    redirect_to list_path
   end
 
   private
