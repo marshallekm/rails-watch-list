@@ -2,14 +2,16 @@
 <div class="container">
   <h2>Movie List</h2>
     <div class="menu">
-      <button><%= link_to "Add movie list", new_list_path%>
-      </ul>
+      <div class="buttons"></div>
+        <button><%= link_to "Movie lists", lists_path %></button>
+        <button><%= link_to "Add movie list", new_list_path%></button>
+      </div>
     </div>
 
-      <button class = "hamburger">
+      <%# <button class = "hamburger">
         <span class = "is-active"></span>
         <span></span>
         <span></span>
-      </button>
+      </button> %>
 </div>
 </nav>

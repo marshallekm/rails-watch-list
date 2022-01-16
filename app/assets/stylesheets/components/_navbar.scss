@@ -18,8 +18,16 @@
 }
 
 .container {
+  padding-top: 8px;
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+    button {
+    float: left;
+    margin: 4px 4px;
+    border-radius: 24px;
+    padding: 8px;
+  }
 }
