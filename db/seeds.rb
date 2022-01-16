@@ -8,18 +8,19 @@
 
 require 'open-uri'
 Movie.destroy_all
-# List.destroy_all
+Bookmark.destroy_all
+List.destroy_all
 
 # the Le Wagon copy of the API
 url = 'http://tmdb.lewagon.com/movie/top_rated'
 response = JSON.parse(URI.open(url).read)
-
-10.times do response['results'].each do |movie_hash|
+response['results'].each do |movie_hash|
   Movie.create!(
     title: movie['tite'],
     overview: movie['overview'],
-    poster_url: "https://image.tmdb.org/t/p/w500" + movie_hash['poster_path'],
+    poster_url: "https://image.tmdb.org/t/p/w500#{movie_hash['poster_path']}",
     rating: movie['vote_average']
   )
-  end
+  puts
+  p movie_hash
 end

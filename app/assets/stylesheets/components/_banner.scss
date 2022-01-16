@@ -1,3 +1,23 @@
-.banner {
-height: 90vh;
+
+
+
+.banner-container {
+height: 100vh;
+width: 100%;
+background-image: url('movie2.jpg');
+background-image:cover ;
 }
+.banner {
+margin-top: 85px;
+margin-left: 60px;
+   h1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 90px;
+    text-align: left;
+    color: white;
+    text-shadow: 1px 1px 1px lightgray;
+
+   }
+
+  }
