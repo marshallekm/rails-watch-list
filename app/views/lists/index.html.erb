@@ -3,11 +3,12 @@
 
   </div>
 </div>
-
+<div id="list-path">
 <div class="card-container">
   <% @lists.each do |list| %>
     <div class="card">
       <%= link_to list.name, list_path(list) %>
     </div>
   <% end %>
+</div>
 </div>

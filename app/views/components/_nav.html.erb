@@ -1,9 +1,9 @@
 <nav>
 <div class="container">
-  <h2>Movie List</h2>
+  <h2>Watch List</h2>
     <div class="menu">
       <div class="buttons"></div>
-        <button><%= link_to "Movie lists", lists_path %></button>
+        <button><%= link_to "Movie lists", lists_path(anchor: "list-path") %></button>
         <button><%= link_to "Add movie list", new_list_path%></button>
       </div>
     </div>
