@@ -1,9 +1,13 @@
+<div class="banner-container">
+  <div class="banner">
 
+  </div>
+</div>
 
 <div class="card-container">
-<% @lists.each do |list| %>
-<div class="card">
-<%= list.name %>
-</div>
-<% end %>
+  <% @lists.each do |list| %>
+    <div class="card">
+      <%= link_to list.name, list_path(list) %>
+    </div>
+  <% end %>
 </div>
