@@ -14,12 +14,11 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new
-    @list = List.create(list_params)
+    @list = List.new(list_params)
     if @list.save
     redirect_to list_path(@list)
     else
-      render :new
+      render :show
     end
   end
 

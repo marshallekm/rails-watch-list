@@ -1,29 +1,35 @@
-<%= render 'components/nav' %>
-<div class="movie-container">
+<nav> <%= render 'components/nav' %> </nav>
+
+<div class="container-movie">
   <div class="moviecards">
       <% @list.movies.each do |movie| %>
       <div class="moviecard">
-         <div class="movie-info">
           <p><%= movie.title %></p>
           <p> <%= movie.rating %></p>
-        </div>
         <%= movie.poster_url %>
         <%= movie.overview %>
         <% movie.bookmarks do |bookmark| %>
         <%= bookmark.comment %>
       </div>
     <% end %>
+    <%= link_to  "Delete", path %>
+     </div>
 <% end %>
 </div>
 
-<h2>Create a bookmark </h2>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-<%= f.input :comment %>
-<%= f.association :movie, input_html: { class: 'select2' } %>
-<%= f.submit %>
-<% end %>
+
+<div class="bookmark-container">
+<div class="bookmark">
+  <h2>Create a bookmark </h2>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie, input_html: { class: 'select2' } %>
+    <%= f.submit %>
+    <% end %>
+  </div>
+  </div>
+</div>
 </div>
 </div>
 
-#delete doesn't work
 <%# <%= link_to "Delete", bookmark_path(@bookmark)%>
