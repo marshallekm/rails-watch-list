@@ -4,9 +4,12 @@
   <h2>watch <%= image_tag('smile_2.svg') %> list </h2>
 
     <div class="menu">
-      <div class="buttons"></div>
-        <button><%= link_to "Movie lists", lists_path(anchor: "list-path") %></button>
+
+      <div class="buttons">
+       <button><%= link_to "Movie lists", lists_path(anchor: "list-path") %></button>
         <button><%= link_to "Add a list", new_list_path%></button>
+      </div>
+
       </div>
     </div>
 
