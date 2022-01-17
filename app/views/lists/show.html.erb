@@ -15,17 +15,15 @@
     <% end %>
 <% end %>
 </div>
-</div>
 
 <h2>Create a bookmark </h2>
-
 <%= simple_form_for [@list, @bookmark] do |f| %>
 <%= f.input :comment %>
 <%= f.association :movie, input_html: { class: 'select2' } %>
 <%= f.submit %>
 <% end %>
-
-<%# <%= link_to  "Create bookmark", new_list_bookmark_path(@list) %>
+</div>
+</div>
 
 #delete doesn't work
 <%# <%= link_to "Delete", bookmark_path(@bookmark)%>
