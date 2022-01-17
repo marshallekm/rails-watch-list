@@ -17,5 +17,15 @@
 </div>
 </div>
 
-<%= link_to  "Create bookmark", new_list_bookmark_path(@list) %>
-<%# <%= link_to "Delete", bookmark_path(bookmark), action: :destroy, method: :destroy, data: {confirm: 'Are you sure you want to delete?'} %>
+<h2>Create a bookmark </h2>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+<%= f.input :comment %>
+<%= f.association :movie %>
+<%= f.submit %>
+<% end %>
+
+<%# <%= link_to  "Create bookmark", new_list_bookmark_path(@list) %>
+
+#delete doesn't work
+<%# <%= link_to "Delete", bookmark_path(@bookmark)%>

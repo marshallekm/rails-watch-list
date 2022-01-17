@@ -1,4 +1,6 @@
 class BookmarksController < ApplicationController
+  before_action :find_bookmark, only: [:destroy]
+
   def new
     #its nested!!!!
     @list = List.find(params[:list_id])
@@ -13,15 +15,19 @@ class BookmarksController < ApplicationController
       redirect_to list_path(@list)
     else
       render :new
+    end
   end
-end
 
   def destroy
     @bookmark = bookmark.destroy
-    redirect_to list_path
+    redirect_to list_path(@bookmark.list)
   end
 
   private
+
+  def find_bookmark
+    @bookmark = Bookmark.find(params[:list_id])
+  end
 
   def bookmark_params
     params.require(:bookmark).permit(:comment, :movie_id)
