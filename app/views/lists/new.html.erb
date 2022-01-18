@@ -1,12 +1,14 @@
 
 <%= render 'components/nav' %>
 <div class="form-container">
+
   <div class="form">
-  <h2> Add a list! </h2>
+  <h2> Add a movie list </h2>
     <%= simple_form_for(@list) do |f| %>
-      <%= f.input :name %>
+      <%= f.input :name , required: true, error: 'Please write a name.' %>
       <%= f.submit 'Create', class: "btn btn-light" %>
       <% end %>
     </div>
-
+   <%# <div class="wave"><%= image_tag('small_wave.svg')%>
+    <%# <div class="wave2"><%= image_tag('small_wave.svg')%>
 </div>

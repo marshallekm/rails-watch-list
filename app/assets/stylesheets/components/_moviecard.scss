@@ -1,12 +1,11 @@
-.moviecontainer {
 
-}
 .moviecards {
 display: flex;
 justify-content: space-evenly;
+flex: flex-wrap;
 }
 .moviecard {
   background-color: white;
-  height: 400px;
+  height: 600px;
   width: 300px;
 }
