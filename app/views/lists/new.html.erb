@@ -6,7 +6,7 @@
   <h2> Add a movie list </h2>
     <%= simple_form_for(@list) do |f| %>
       <%= f.input :name , required: true, error: 'Please write a name.' %>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, as: :file, class: "btn btn-light" %>
       <%= f.submit 'Create', class: "btn btn-light" %>
       <% end %>
     </div>

@@ -19,4 +19,14 @@ margin-left: 18px;
 margin-right:18px;
 align-items: center;
 border-radius: 8px;
+will-change: transform;
+transition: all 1s;
+
+
+
+}
+
+.card:hover {
+  transition: all .2s;
+  transform: translateY(-15px);
 }

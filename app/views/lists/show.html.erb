@@ -1,18 +1,18 @@
 <nav> <%= render 'components/nav' %> </nav>
 
-<div class="show-container">
-  <div class="movie-card">
+<%# <div class="show-container">
+  <div class="movie-card"> %>
       <% @list.movies.each do |movie| %>
-      <div class="moviecard p-3 rounded-bottom d-flex flex-column">
+      <%# <div class="moviecard p-3 rounded-bottom d-flex flex-column"> %>
           <p><%= movie.title %></p>
           <p> <%= "⭐" * movie.rating %></p>
         <%= image_tag movie.poster_url %>
         <% movie.bookmarks.each do |bookmark| %>
         <%= bookmark.comment %>
         <%= link_to  "Delete",  bookmark_path(bookmark), method: :destroy %>
-      </div>
+      <%# </div> %>
     <% end %>
-     </div>
+     <%# </div> %>
 <% end %>
 
 
@@ -28,4 +28,3 @@
 
 
 </div>
-<%# <%= link_to "Delete", bookmark_path(@bookmark)%>
