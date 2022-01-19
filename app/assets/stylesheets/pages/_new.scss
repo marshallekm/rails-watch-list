@@ -13,10 +13,23 @@ background: linear-gradient(
 
 }
 
-.wave {
-position: absolute;
+@media only screen and (max-width: 1200px) {
+.form {
+height: 350px;
+width: 500px;
+
 }
 
-.wave2 {
+}
 
+
+@media only screen and (max-width: 600px) {
+.form {
+  height: 400px;
+  width: 400px;
+}
+
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
 }

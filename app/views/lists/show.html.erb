@@ -4,17 +4,21 @@
   <div class="movie-card-container">
     <% @list.movies.each do |movie| %>
       <div class="movie-card p-3 rounded-bottom d-flex flex-column">
-        <p><%= movie.title %></p>
+        <h4><%= movie.title %></h4>
         <p> <%= "⭐" * movie.rating %></p>
         <%= image_tag movie.poster_url %>
         <% movie.bookmarks.each do |bookmark| %>
-          <%= bookmark.comment %>
-          <%= link_to  "Delete",  bookmark_path(bookmark), method: :destroy %>
+          <p class="comment"> "<%=  bookmark.comment %>"</p>
         <% end %>
       </div>
     <% end %>
   </div>
 </div>
+
+
+
+
+
 
 <div class="bookmark-container">
 <div class="bookmark">

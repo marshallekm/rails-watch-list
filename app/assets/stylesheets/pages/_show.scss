@@ -15,9 +15,22 @@ width: 400px;
 height: 500px;
 padding: 50px;
 margin: 28px 28px;
+border-radius: 18px !important;
 background-color: white;
+   h4 {
+     align-self: center;
+   }
+
+   p {
+     align-self: center;
+   }
+
+  .comment {
+    margin-top: 8px;
+  }
+
  img {
-   align-self: center;
+  align-self: center;
   width:250px;
   height:350px;
  }
