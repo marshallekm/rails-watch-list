@@ -2,3 +2,32 @@
 @import "home";
 @import "new";
 @import "show";
+
+@media only screen and (max-width: 1200px) {
+
+
+  .banner {
+
+       h1 {
+  font-size: 70px;
+       }
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .banner {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+}
+@media only screen and (max-width: 425px) {
+ .banner {
+  h1 {
+    font-size: 20px;
+  }
+}
+
+}
