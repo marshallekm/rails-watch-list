@@ -1,11 +1,11 @@
 
-.moviecards {
-display: flex;
-justify-content: space-evenly;
-flex: flex-wrap;
-}
-.moviecard {
+.movie-card {
   background-color: white;
   height: 600px;
   width: 300px;
+
+}
+
+.show-container {
+display: flex;
 }

@@ -49,11 +49,21 @@ h2 {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(5px);
    color: white;
-    h2 {
-     text-shadow: 1px 1px 1px gray;
-
-    }
+   a:-webkit-any-link {
+  text-decoration: white;
 }
+
+
+}
+
+h2 {
+  text-shadow: 1px 1px 1px gray;
+  color: white;
+  a:-webkit-any-link {
+  text-decoration: white;
+  }
+}
+
 
 
 .buttons {
