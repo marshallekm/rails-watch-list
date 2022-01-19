@@ -1,22 +1,22 @@
 <nav> <%= render 'components/nav' %> </nav>
 
-<%# <div class="show-container">
-  <div class="movie-card"> %>
-      <% @list.movies.each do |movie| %>
-      <%# <div class="moviecard p-3 rounded-bottom d-flex flex-column"> %>
-          <p><%= movie.title %></p>
-          <p> <%= "⭐" * movie.rating %></p>
+ <div class="show-container">
+  <div class="movie-card-container">
+    <% @list.movies.each do |movie| %>
+      <div class="movie-card p-3 rounded-bottom d-flex flex-column">
+        <p><%= movie.title %></p>
+        <p> <%= "⭐" * movie.rating %></p>
         <%= image_tag movie.poster_url %>
         <% movie.bookmarks.each do |bookmark| %>
-        <%= bookmark.comment %>
-        <%= link_to  "Delete",  bookmark_path(bookmark), method: :destroy %>
-      <%# </div> %>
+          <%= bookmark.comment %>
+          <%= link_to  "Delete",  bookmark_path(bookmark), method: :destroy %>
+        <% end %>
+      </div>
     <% end %>
-     <%# </div> %>
-<% end %>
+  </div>
+</div>
 
-
-
+<div class="bookmark-container">
 <div class="bookmark">
   <h2>Create a bookmark </h2>
     <%= simple_form_for [@list, @bookmark] do |f| %>
@@ -25,6 +25,6 @@
     <%= f.submit %>
     <% end %>
   </div>
-
+</div>
 
 </div>

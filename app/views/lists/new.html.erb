@@ -3,7 +3,8 @@
 <div class="form-container">
 
   <div class="form">
-  <h2> Add a movie list </h2>
+  <h2> Curate a movie list </h2>
+
     <%= simple_form_for(@list) do |f| %>
       <%= f.input :name , required: true, error: 'Please write a name.' %>
       <%= f.input :photo, as: :file, class: "btn btn-light" %>
