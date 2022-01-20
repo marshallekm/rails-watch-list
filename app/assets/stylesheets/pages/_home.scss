@@ -1,4 +1,25 @@
 // Specific CSS for your home-page
-// img {
-//   position: absolute;
-// }
+
+.heroku-image{
+  img {
+  border-radius: 4px;
+  }
+}
+
+.list-name {
+
+
+
+
+}
+
+h3 {
+// background: radial-gradient(#ffbc00, #ff65aa);
+// -webkit-background-clip: text;
+// -webkit-text-fill-color:transparent;
+  a:-webkit-any-link {
+    text-decoration: none;
+    color: black;
+
+  }
+}
