@@ -6,16 +6,14 @@
 <div class="container-show">
  <div class="show-container">
   <div class="movie-card-container">
-    <% @list.movies.each do |movie| %>
+    <% @list.bookmarks.each do |bookmark| %>
       <div class="movie-card p-3 rounded-bottom d-flex flex-column">
+      <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: {confirm: " Are you sure you want to delete ?"} %>
       <i class="far fa-window-close"></i>
-
-        <h4><%= movie.title %></h4>
-        <p> Rating: ⭐ <%= movie.rating %> </p>
-        <%= image_tag movie.poster_url %>
-        <% movie.bookmarks.each do |bookmark| %>
+        <h4><%= bookmark.movie.title %></h4>
+        <p> Rating: ⭐ <%= bookmark.movie.rating %> </p>
+        <%= image_tag bookmark.movie.poster_url %>
           <p class="comment"> <i class="fas fa-quote-left"></i>&nbsp;<%=  bookmark.comment %>&nbsp;<i class="fas fa-quote-right"></i></p>
-        <% end %>
       </div>
     <% end %>
   </div>
