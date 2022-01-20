@@ -1,5 +1,8 @@
 <nav> <%= render 'components/nav' %> </nav>
 <h1><%= @list.name %> </h1>
+
+
+
 <div class="container-show">
  <div class="show-container">
   <div class="movie-card-container">
@@ -9,7 +12,7 @@
         <p> <%= "⭐" * movie.rating %></p>
         <%= image_tag movie.poster_url %>
         <% movie.bookmarks.each do |bookmark| %>
-          <p class="comment"> "<%=  bookmark.comment %>"</p>
+          <p class="comment"> <i class="fas fa-quote-left"></i>&nbsp;<%=  bookmark.comment %>&nbsp;<i class="fas fa-quote-right"></i></p>
         <% end %>
       </div>
     <% end %>
