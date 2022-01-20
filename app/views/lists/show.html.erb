@@ -8,8 +8,10 @@
   <div class="movie-card-container">
     <% @list.movies.each do |movie| %>
       <div class="movie-card p-3 rounded-bottom d-flex flex-column">
+      <i class="far fa-window-close"></i>
+
         <h4><%= movie.title %></h4>
-        <p> <%= "⭐" * movie.rating %></p>
+        <p> Rating: ⭐ <%= movie.rating %> </p>
         <%= image_tag movie.poster_url %>
         <% movie.bookmarks.each do |bookmark| %>
           <p class="comment"> <i class="fas fa-quote-left"></i>&nbsp;<%=  bookmark.comment %>&nbsp;<i class="fas fa-quote-right"></i></p>
