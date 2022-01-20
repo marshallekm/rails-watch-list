@@ -1,5 +1,6 @@
 <nav> <%= render 'components/nav' %> </nav>
-
+<h1><%= @list.name %> </h1>
+<div class="container-show">
  <div class="show-container">
   <div class="movie-card-container">
     <% @list.movies.each do |movie| %>
@@ -19,8 +20,6 @@
 
 
 
-
-<div class="bookmark-container">
 <div class="bookmark">
   <h2>Create a bookmark </h2>
     <%= simple_form_for [@list, @bookmark] do |f| %>
@@ -28,7 +27,8 @@
     <%= f.association :movie, input_html: { class: 'select2' } %>
     <%= f.submit %>
     <% end %>
-  </div>
+
 </div>
+
 
 </div>

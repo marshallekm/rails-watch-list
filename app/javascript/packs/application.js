@@ -8,14 +8,9 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap';
-import Typed from 'typed.js';
+import './imageAdder';
+import './init_select2';
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-
-import { initSelect2 } from '../components/init_select2';
-
-document.addEventListener("turbolinks:load", function() {
-  initSelect2();
-});
