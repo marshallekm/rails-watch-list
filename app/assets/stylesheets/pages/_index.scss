@@ -3,6 +3,13 @@
 @import "new";
 @import "show";
 
+.item-card-category {
+background-size: cover;
+background-position: center;
+height: 240px;
+}
+
+
 @media only screen and (max-width: 1200px) {
 
   header {
