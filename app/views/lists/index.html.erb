@@ -9,7 +9,7 @@
    <div class="item card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
     url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path('dark4.png') %>)">
 
-    <%= cl_image_tag list.photo.key, height: 300, width: 350, crop: :fill %>
+    <%# <%= cl_image_tag list.photo.key, height: 300, width: 350, crop: :fill %>
     </div>
       <h3 class="list-name"><%= link_to list.name, list_path(list) %></h3>
     </div>
